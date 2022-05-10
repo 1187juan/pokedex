@@ -1,0 +1,23 @@
+@use './normalize.css';
+:root {
+	--color-bg: hsl(0 0% 92%);
+	--color-black: hsl(0 0% 0%);
+	--color-onPrimary: hsl(0 0% 100%);
+	--color-onPrimaryDisabled: hsl(0 0% 100% / 0.38);
+	--color-onPrimaryHigh: hsl(0 0% 100% /1);
+	--color-onPrimaryMedium: hsl(0 0% 100% / 0.74);
+	--color-onSurface: hsl(0 0% 0%);
+	--color-onSurfaceDisabled: hsl(0 0% 62%);
+	--color-onSurfaceHigh: hsl(0 0% 13%);
+	--color-onSurfaceMedium: hsl(0 0% 40%);
+	--color-outline: hsl(0 0% 88%);
+	--color-primary: hsl(192 100% 50%);
+	--color-secondary: hsl(0 0% 94%);
+	--color-surface: hsl(0 0% 96%);
+	--color-white: hsl(0 0% 100%);
+}
+
+body {
+	font-family: 'Roboto', sans-serif;
+	background-color: var(--color-bg);
+}
