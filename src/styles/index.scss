@@ -1,7 +1,15 @@
 @use './normalize.scss';
 @use './colors.scss';
 
+@font-face {
+	font-family: 'Helvetica Now';
+	src: local('Helvetica Now Extra Bold'), local('HelveticaNow-ExtraBold'),
+		url(../assets/fonts/HelveticaNowText-ExtraBold.woff);
+	font-weight: 800;
+}
+
 body {
 	font-family: 'Roboto', sans-serif;
 	background-color: var(--color-bg);
+	min-height: 100vh;
 }

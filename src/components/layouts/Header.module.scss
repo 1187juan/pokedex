@@ -1,0 +1,17 @@
+.nav {
+	height: 100%;
+	width: 100%;
+	max-width: 1024px;
+	margin: 0 auto;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.linkLogo {
+	height: 56px;
+
+	img {
+		height: 100%;
+	}
+}

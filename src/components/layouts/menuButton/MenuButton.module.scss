@@ -1,0 +1,23 @@
+.button {
+	position: fixed;
+	bottom: 1rem;
+	right: 1rem;
+	width: 56px;
+	height: 56px;
+	border: none;
+	border-radius: 50%;
+
+	background-color: var(--color-primary);
+	color: var(--color-onPrimary);
+	cursor: pointer;
+
+	&:hover {
+		filter: brightness(1.1);
+	}
+	svg {
+		width: 24px;
+		height: 24px;
+		margin: auto;
+		display: block;
+	}
+}
