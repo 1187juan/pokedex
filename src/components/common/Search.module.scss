@@ -1,0 +1,33 @@
+.container {
+	position: relative;
+	height: 48px;
+	width: min(320px, 100%);
+	margin-left: 1rem;
+	border-radius: 0.25rem;
+}
+.input {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	padding: 0px 3rem 0px 1rem;
+	background-color: var(--color-outline);
+	border: none;
+
+	&:focus {
+		outline: none;
+		filter: brightness(0.95);
+	}
+}
+.button {
+	position: absolute;
+	right: 0px;
+	width: 48px;
+	height: 100%;
+	border: none;
+	background-color: transparent;
+}
+.svg {
+	width: 24px;
+}

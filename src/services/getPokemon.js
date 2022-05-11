@@ -2,6 +2,7 @@ const API = import.meta.env.VITE_POKEMONS_API
 
 export const getPokemon = async (id) => {
 	const res = await fetch(`${API}/pokemon/${id}`)
+
 	if (!res.ok)
 		throw new Error('Error al cargar el Pokémon, intentalo más tarde.')
 
