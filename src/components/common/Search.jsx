@@ -32,7 +32,7 @@ export const Search = () => {
 		<form className={styles.container} onSubmit={handleSubmit}>
 			<input
 				type='text'
-				placeholder='Búscar...'
+				placeholder='Búscar por nombre o id'
 				className={styles.input}
 				value={beforeSearch}
 				onChange={handleChange}

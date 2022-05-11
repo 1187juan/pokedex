@@ -5,6 +5,7 @@ import { Title } from './Title'
 export const Card = ({ title, imgUrl, id }) => {
 	return (
 		<Link to={'/pokemon/' + id} className={styles.link}>
+			<div className={styles.number}>{id}</div>
 			<img src={imgUrl} alt={title} className={styles.img} />
 			<Title variant='h4' component='h1'>
 				{title}

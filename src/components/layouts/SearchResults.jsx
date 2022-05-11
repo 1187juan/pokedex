@@ -10,12 +10,15 @@ export const SearchResults = ({ search }) => {
 	useEffect(() => {
 		const task = async () => {
 			try {
-				const data = await getPokemon(search)
+				if (!search.trim()) return setPokemon(null)
+
+				const data = await getPokemon(search.toLowerCase())
 				setPokemon(data)
 			} catch (error) {
 				setPokemon(null)
+			} finally {
+				setIsLoading(false)
 			}
-			setIsLoading(false)
 		}
 		task()
 	}, [])

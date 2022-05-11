@@ -1,4 +1,4 @@
-const API = import.meta.env.VITE_POKEMONS_API
+const API = 'https://pokeapi.co/api/v2'
 
 export const getPokemon = async (id) => {
 	const res = await fetch(`${API}/pokemon/${id}`)
