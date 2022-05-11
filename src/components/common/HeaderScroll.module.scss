@@ -1,6 +1,7 @@
 .header {
 	position: sticky;
 	top: 0px;
+	z-index: var(--zIndex-header);
 	width: auto;
 	padding: 0 1rem;
 	height: 64px;

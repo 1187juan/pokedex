@@ -4,12 +4,17 @@ import styles from './Menu.module.scss'
 export const Menu = ({ onClick }) => {
 	return (
 		<div className={styles.menu} onClick={onClick}>
-			<Link to='/' className={styles.menuItem}>
-				Item 1
+			<Link to='/info' className={styles.menuItem}>
+				Información
 			</Link>
-			<Link to='/' className={styles.menuItem}>
-				Item 2
-			</Link>
+			<a
+				href='https://pokeapi.co'
+				target='_blank'
+				className={styles.menuItem}
+				rel='noreferrer'
+			>
+				PokéApi
+			</a>
 		</div>
 	)
 }

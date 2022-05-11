@@ -1,0 +1,26 @@
+.link {
+	padding: 1rem;
+	display: grid;
+	grid-template: 50% max-content / auto;
+	place-content: center;
+	gap: 1rem;
+
+	text-align: center;
+	text-decoration: none;
+
+	background-color: var(--color-surface);
+	color: var(--color-onSurfaceHight);
+	border-radius: 0.25rem;
+
+	transition: transform 0.2s ease;
+
+	&:hover {
+		transform: scale(1.05);
+		box-shadow: 0px 19px 38px rgba(0, 0, 0, 0.16);
+	}
+}
+.img {
+	display: block;
+	width: 100%;
+	height: 100%;
+}

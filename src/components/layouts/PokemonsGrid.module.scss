@@ -1,0 +1,24 @@
+.container {
+	max-width: calc(1024px + 2rem);
+	padding: 1rem;
+	margin: 0 auto;
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(min(100%, 250px), 1fr));
+	grid-auto-rows: 400px;
+	gap: 1rem;
+}
+
+.button {
+	padding: 1rem 1.5rem;
+	border: none;
+	display: block;
+	margin: 2rem auto;
+
+	font-weight: 500;
+
+	cursor: pointer;
+
+	&:hover {
+		background-color: var(--color-outline);
+	}
+}
