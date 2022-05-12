@@ -1,42 +1,38 @@
-import { usePokemons } from '../../contexts/PokemonsProvider'
 import { Card } from '../common/Card'
 import styles from './PokemonsGrid.module.scss'
-import { nanoid } from 'nanoid'
-import { getPokemons } from '../../services'
-import { useState } from 'react'
+import { useEffect } from 'react'
+import { fetchPokemons } from '../../store/slices/pokemons'
+import { useDispatch, useSelector } from 'react-redux'
 
 export const PokemonsGrid = () => {
-	const { isLoading, pokemons, addPokemons } = usePokemons()
-	const [loading, setLoading] = useState(false)
+	const dispatch = useDispatch()
+	const pokemons = useSelector((state) => state.pokemons)
+	console.log(pokemons.isLoading)
 
-	const handleMore = async () => {
-		try {
-			setLoading(true)
-			const data = await getPokemons(pokemons.next)
-			addPokemons(data)
-		} catch (error) {
-			alert(error.message)
-		}
-		setLoading(false)
-	}
+	const handleNext = () => dispatch(fetchPokemons(pokemons.next))
 
-	if (isLoading) return <div>Cargando...</div>
+	useEffect(() => {
+		dispatch(fetchPokemons())
+	}, [dispatch])
+
+	if (pokemons.isLoading && !pokemons.results.length)
+		return <div>Cargando...</div>
 
 	return (
 		<>
 			<div className={styles.container}>
 				{pokemons.results.map((pokemon) => (
 					<Card
-						key={nanoid()}
+						key={pokemon.id}
 						id={pokemon.id}
 						imgUrl={pokemon.imgUrl}
 						title={pokemon.name}
 					/>
 				))}
 			</div>
-			{loading && <div>Cargando...</div>}
-			{pokemons.next && !loading && (
-				<button onClick={handleMore} className={styles.button}>
+
+			{pokemons.next && !pokemons.isLoading && (
+				<button onClick={handleNext} className={styles.button}>
 					Mostrar más
 				</button>
 			)}

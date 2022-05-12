@@ -1,12 +1,13 @@
-import { PokemonsProvider } from './contexts/PokemonsProvider'
+import { Provider } from 'react-redux'
 import { AppRouter } from './routers/AppRouter'
+import { store } from './store'
 
 export const App = () => {
 	return (
 		<>
-			<PokemonsProvider>
+			<Provider store={store}>
 				<AppRouter />
-			</PokemonsProvider>
+			</Provider>
 		</>
 	)
 }
