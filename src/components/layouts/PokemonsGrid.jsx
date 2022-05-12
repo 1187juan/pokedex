@@ -7,7 +7,6 @@ import { useDispatch, useSelector } from 'react-redux'
 export const PokemonsGrid = () => {
 	const dispatch = useDispatch()
 	const pokemons = useSelector((state) => state.pokemons)
-	console.log(pokemons.isLoading)
 
 	const handleNext = () => dispatch(fetchPokemons(pokemons.next))
 
